@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let number = parseInt(prompt("Nhập n so "));
+let count = 0; //đếm số ước của số
+let countNST = 0;
+let i =2;
+let j;
+for(;i <1000; i++){
+  if(countNST<number){
+    for(j = 1; j <= i; j++){
+      if(i%j == 0){
+        count += 1;
+      }
+    }
+    if(count==2){
+      document.write(i + "<br>");
+      countNST += 1;
+    }
+    count = 0;
+  }else{
+    break;
+  }
+}
+</script>
+
+</body>
+</html>
